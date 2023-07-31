@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+
+      body{
+    background-color:var(--FreeSpeechBlue);
+    font-family: 'noto sans',sans-serif;
+
+    --Melrose:#B5B0D9;
+    --FreeSpeechBlue:#201c94;
+    --MediumSlateBlueD:#6863F2;
+    --MediumSlateBlueL:#9C99F2;
+    --WhiteSmoke:#F2F2F2;
+    --LiteBLUE:#199;
+    --Darkblue:#332fa9;
+
+
+    --height:1136px;
+    --width:640px;
+}
+/* PHONE */
+/* HW2 : karkas-gradient,radius,units,mm,cm */
+/* HW3-optional-de facut sus in colt bateria,wifi,ora si antena */
+.mockphone{
+    background-color: rgb(58, 130, 126);
+    transform: scale(0.8); 
+    display: inline-block;
+    padding: 20px;
+    border-radius: 30px;
+    
+    
+}
+.mockphone .viber{
+    position: absolute;
+    left: 25px;
+    
+}
+
+.mockphone .screen{
+    width: var(--width);
+    height: var(--height);
+    border: 100px solid var(--Darksilver);
+    
+      
+}
+#viber-app{
+    background-color: var(--WhiteSmoke);
+    width: 100%;/* for real screen need ( vh,vw ) */
+    height: 100%;
+    position: relative;
+    background-color: white;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+    
+}
+#viber-app .viber{
+    font-weight: bold;
+    font-size: 50px; 
+}
+
+#viber-app header{
+width: 100%;
+height: 7%;
+position: absolute;
+background-color:white;
+color: black;
+}
+
+#viber-app section{
+    height: 86%;
+    width: 100%;
+    background-color: var(--WhiteSmoke);
+    position: relative;
+    top: 7%;
+    margin-top: 40px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+
+#viber-app .chat{
+    width: 100%;
+    height: 7%;
+    position:absolute;
+    background-color:white;
+    bottom:0 ;
+    color: white;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+}
+
+
+#viber-app .contacts{
+    height: 100%;
+    background-color: var(--WhiteSmoke);
+}
+
+
+#viber-app .contacts li{
+    height: calc(100% / 8);
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+}
+
+.contact{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+.contact .photo1{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 9px;
+    left: 8px;
+}
+
+
+.contact h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+
+
+.contact p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+}
+
+
+.data{
+    position: absolute;
+    right: 5px;
+    top: 15px;
+}
+
+
+.data .status{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom: -6px;
+}
+
+
+.data .time{
+    color: rgb(78, 77, 77);
+}
+
+
+.data .count{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+
+
+
+.contact2{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact2 .photo2{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact2 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact2 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data2{
+    position: absolute;
+    right: 5px;
+    top: 140px;
+}
+.data2 .status2{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data2 .time2{
+    color: rgb(78, 77, 77);
+}
+.data2 .count2{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+
+
+
+.contact3{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact3 .photo3{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact3 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact3 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data3{
+    position: absolute;
+    right: 5px;
+    top: 260px;
+}
+.data3 .status3{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data3 .time3{
+    color: rgb(78, 77, 77);
+}
+.data3 .count3{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+
+.contact4{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact4 .photo4{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact4 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact4 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data4{
+    position: absolute;
+    right: 5px;
+    top: 380px;
+}
+.data4 .status4{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data4 .time4{
+    color: rgb(78, 77, 77);
+}
+.data4 .count4{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact5{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact5 .photo5{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact5 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact5 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data5{
+    position: absolute;
+    right: 5px;
+    top: 505px;
+}
+.data5 .status5{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data5 .time5{
+    color: rgb(78, 77, 77);
+}
+.data5 .count5{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact6{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact6 .photo6{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    border-radius:50px;
+    
+}
+.contact6 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact6 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data6{
+    position: absolute;
+    right: 5px;
+    top: 625px;
+}
+.data6 .status6{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data6 .time6{
+    color: rgb(78, 77, 77);
+}
+.data6 .count6{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact7{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact7 .photo7{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact7 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact7 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data7{
+    position: absolute;
+    right: 5px;
+    top: 750px;
+}
+.data7 .status7{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data7 .time7{
+    color: rgb(78, 77, 77);
+}
+.data7 .count7{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact8{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact8 .photo8{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact8 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact8 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data8{
+    position: absolute;
+    right: 5px;
+    top: 875px;
+}
+.data8 .status8{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data8 .time8{
+    color: rgb(78, 77, 77);
+}
+.data8 .count8{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact9{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact9 .photo9{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact9 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact9 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data9{
+    position: absolute;
+    right: 5px;
+    top: 1000px;
+}
+.data9 .status9{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data9 .time9{
+    color: rgb(78, 77, 77);
+}
+.data9 .count9{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact10{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact10 .photo10{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact10 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact10 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data10{
+    position: absolute;
+    right: 5px;
+    top: 1120px;
+}
+.data10 .status10{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data10 .time10{
+    color: rgb(78, 77, 77);
+}
+.data10 .count10{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+
+.contact11{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact11 .photo11{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact11 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact11 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data11{
+    position: absolute;
+    right: 5px;
+    top: 1360px;
+}
+.data11 .status11{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data11 .time11{
+    color: rgb(78, 77, 77);
+}
+.data11 .count11{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact12{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact12 .photo12{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact12 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact12 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data12{
+    position: absolute;
+    right: 5px;
+    top: 1485px;
+}
+.data12 .status12{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data12 .time12{
+    color: rgb(78, 77, 77);
+}
+.data12 .count12{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+.contact13{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+
+}
+.contact13 .photo13{
+    width: 80px;
+    height: 95px;
+    border-radius: 50px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    
+}
+.contact13 h2{
+    width: 250px;
+    height: 30px;
+    /* border: 1px solid white; */
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 30px;
+    color: rgb(30, 30, 30);
+    font-weight: bold;
+}
+.contact13 p{
+    width: 250px;
+    height: 30px;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    color: rgb(89, 88, 88);
+
+}
+
+.data13{
+    position: absolute;
+    right: 5px;
+    top: 1240px;
+}
+.data13 .status13{
+background-color: transparent;
+position: absolute;
+right: 45px;
+bottom:-6px;
+}
+.data13 .time13{
+    color: rgb(78, 77, 77);
+}
+.data13 .count13{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    position: absolute;
+    border: 1px solid blue;
+    border-radius: 100%;
+    background-color: #201c94;
+    color: white;
+    top: 30px;
+    right: 1px;
+}
+
+
+.chat-img{
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    left: 40px;
+    top: 15px;
+}
+.chat .count9 {
+    width: 35px;
+    height: 35px;
+    background-color: blue;
+    border-radius: 100%;
+    position: absolute;
+    left: 75px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 20px;
+}
+.chat .call img{
+    position: absolute;
+    left: 280px;
+    width: 80px;
+    height: 80px;
+}
+.chat .menu img{
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    right: 40px;
+    top: 10px;
+}
+.chat .togler img{
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    bottom:143px;
+    right:50px;
+    border: 20px solid blue;
+    border-radius: 100%;
+    background-color: blue;
+}
+
+
+.circle-animation{
+    width: 5em;
+    height: 5em;
+    /* border: 3px solid white; */
+    bottom:0.5em;
+    right: 0.5em;
+    position: fixed;
+}
+.circle{
+    width: 50px;
+    height:50px;
+    border: 3px solid black;
+    position: fixed;
+    right: 82px;
+    bottom: 175px;
+    border-radius: 100%;
+    animation: wave 2.5s infinite linear;
+}
+.circle-animation .circle:nth-child(2){
+    animation-delay:0.3s ;
+}
+.circle-animation .circle:nth-child(2){
+    animation-delay: 0.3s;
+}
+@keyframes wave{
+
+    0%{transform: scale(0); opacity: 0.2;}
+    25%{transform: scale(0); opacity: 0.5;}
+    50%{transform: scale(0); opacity: 1;}
+    100%{transform: scale(3); opacity: 0;}
+}
+
+.mockphone .volum-down{
+  width: 10px;
+  height: 70px;
+  background-color: rgb(198, 193, 193);
+  position: fixed;
+  left:-10px;
+  top: 350px;
+  
+
+}
+.mockphone .volum-up{
+  width: 10px;
+  height: 70px;
+  background-color: rgb(198, 193, 193);
+  position: fixed;
+  left:-10px;
+  top: 220px;
+  
+
+}
+.mockphone .close{
+  width: 10px;
+  height: 70px;
+  background-color: rgb(198, 193, 193);
+  position: fixed;
+  right:-10px;
+  top: 270px;
+  
+}
+.mockphone .camera{
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  background-color: black;
+  border-radius: 100%;
+
+  left: 200px;
+  top: 15px;
+}
+.mockphone .camera-screen{
+position: fixed;
+right: 120px;
+}
+.mockphone .elements{
+  position: fixed;
+  right: 50px;
+  top: 120px;
+  z-index: 1;
+}
+
+
+.mockphone .speaker{
+  width: 100px;
+  height: 10px;
+  position: absolute;
+  border: 3px solid rgb(71, 70, 70);
+  left: 280px;
+  background-color: rgb(52, 72, 159);
+  border-radius: 10px;
+  background-color: white;
+
+}
+.mockphone .speaker .punct{
+  position: relative;
+  left: 7px;
+  bottom: 26px;
+  font-size: 30px;
+  padding: 7px;
+}
+.container{
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  position: relative;
+  top: 41px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  
+  
+}
+.mockphone .container .time{
+position: absolute;
+right: 40px;
+top: 20px;
+font-size: 25px;
+font-weight: bold;
+
+}
+.mockphone .container .battery{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 10px;
+  right: 105px;
+
+}
+.mockphone .container .antenna{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 145px;
+  top: 15px;
+
+}
+.mockphone .container .wifi{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 190px;
+  top: 15px;
+
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="mockphone">
+      <div class="speaker">
+        <div class="punct">
+        .
+        .
+        .
+        .
+        .
+      </div>
+      </div>
+      <div class="elements">
+      <div class="volum-up"></div>
+      <div class="volum-down"></div>
+      <div class="close"></div>
+      <div class="camera"></div>
+      <div class="camera-screen">
+        <a href="#">
+<img src="https://icons.iconarchive.com/icons/iynque/ios7-style/48/Camera-icon.png" alt="camera-screen">
+        </a>
+      </div>
+      <div class="search">
+        <a href="#">
+        <img src="https://icons.iconarchive.com/icons/ampeross/qetto-2/48/search-icon.png" alt="search">
+      </a>
+      </div>
+    </div>
+<div class="container">
+  <div class="time">
+    09:45
+  </div>
+
+  <div>
+    <img class="battery" 
+    src="battery.png" 
+    alt="battery">
+
+  </div>
+
+  <div>
+    <img class="antenna" 
+    src="4g.png" 
+    alt="4g">
+  </div>
+  
+<div>
+  <img class="wifi" src="wifi.png"
+  alt="wifi">
+</div>
+
+</div>
+      <div class="screen">
+
+    <main id="viber-app">
+
+       <header>
+           <div class="viber">
+            viber
+           </div>
+       </header>
+
+           <section>
+       <ul class="contacts">
+        <li>
+
+
+          <a href="#">
+            <div class="contact">
+              <img class="photo1" src="https://www.refinery29.com/images/11165401.jpg?format=webp&width=720&height=864&quality=85" alt="avatar">
+              <h2>Rihanna</h2>
+              <p>Igor salut,ce mai faci prietene?</p>
+              <p>imi pare foarte bine sa te revad!</p>
+            </div>
+
+            <div class="data">
+              <div class="status">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time">
+                07:37
+              </div>
+              <div class="count">
+                11
+              </div>
+            </div>
+          </a>
+
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="contact2">
+              <img class="photo2" src="https://cdn.7days.ru/upload/images/bcb/d82e3e6fbf77d423e2a04659fc90f.jpg" alt="avatar">
+              <h2>Jim Carry</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+
+            <div class="data2">
+              <div class="status2">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time2">
+                05:45
+              </div>
+              <div class="count2">
+                8
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#">
+            <div class="contact3">
+              <img class="photo3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Christian_Bale_2009.jpg/1200px-Christian_Bale_2009.jpg" alt="avatar">
+              <h2>Christian Bale</h2>
+              <p>Lorem ipsum dolor sit amet consectetur..</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+
+            <div class="data3">
+              <div class="status3">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time3">
+                12:13
+              </div>
+              <div class="count3">
+                2
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+        <li>
+          <a href="#">
+            <div class="contact4">
+              <img class="photo4" src="https://hips.hearstapps.com/hmg-prod/images/tom-hardy-4-1627480440.png" alt="avatar">
+              <h2>Tom Hardy</h2>
+              <p>Lorem ipsum dolor sit amet consectetur..</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+
+            <div class="data4">
+              <div class="status4">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time4">
+                14:21
+              </div>
+              <div class="count4">
+                5
+              </div>
+            </div>
+          </a>
+        </li>
+
+
+
+        <li>
+          <a href="#">
+          <div class="contact5">
+            <img class="photo5" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Robert_Downey_Jr_avp_Iron_Man_3_Paris.jpg" alt="avatar">
+            <h2>Downey Jr</h2>
+            <p>Lorem ipsum dolor sit amet consectetur..</p>
+            <p>Lorem, ipsum dolor.</p>
+          </div>
+
+          <div class="data5">
+            <div class="status5">
+              <img src="check-mark.svg" alt="check-mark">
+            </div>
+            <div class="time5">
+              10:31
+            </div>
+            <div class="count5">
+              5
+            </div>
+          </div>
+        </a>
+      </li>
+
+        <li>
+          <a href="#">
+            <div class="contact6">
+              <img class="photo6" src="https://flxt.tmsimg.com/assets/249381_v9_bb.jpg" alt="avatar">
+              <h2>Chris Pratt</h2>
+              <p>Lorem ipsum dolor sit amet consectetur..</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+  
+            <div class="data6">
+              <div class="status6">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time6">
+                15:31
+              </div>
+              <div class="count6">
+                1
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="contact7">
+              <img class="photo7" src="https://i.pinimg.com/originals/d8/00/00/d800003beaa80a6ebbdff8f14512e3a9.jpg" alt="avatar">
+              <h2>carla's dream</h2>
+              <p>Lorem ipsum dolor sit amet consectetur..</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+  
+            <div class="data7">
+              <div class="status7">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time7">
+                21:21
+              </div>
+              <div class="count7">
+                3
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="contact8">
+              <img class="photo8" src="https://m.media-amazon.com/images/M/MV5BMTc0MDMyMzI2OF5BMl5BanBnXkFtZTcwMzM2OTk1MQ@@._V1_FMjpg_UX1000_.jpg" alt="avatar">
+              <h2>Morgan Freeman</h2>
+              <p>Lorem ipsum dolor sit amet consectetur..</p>
+              <p>Lorem, ipsum dolor.</p>
+            </div>
+  
+            <div class="data8">
+              <div class="status8">
+                <img src="check-mark.svg" alt="check-mark">
+              </div>
+              <div class="time8">
+                22:03
+              </div>
+              <div class="count8">
+                2
+              </div>
+            </div>
+          </a>
+        </li>
+<li>
+  <a href="#">
+    <div class="contact9">
+      <img class="photo9" src="https://flxt.tmsimg.com/assets/1650_v9_ba.jpg" alt="avatar">
+      <h2>Will Smith</h2>
+      <p>Lorem ipsum dolor sit amet consectetur..</p>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="data9">
+      <div class="status9">
+        <img src="check-mark.svg" alt="check-mark">
+      </div>
+      <div class="time9">
+        00:10
+      </div>
+      <div class="count9">
+        3
+      </div>
+    </div>
+  </a>
+</li>
+<li>
+  <a href="#">
+    <div class="contact10">
+      <img class="photo10" src="https://flxt.tmsimg.com/assets/74064_v9_bb.jpg" alt="avatar">
+      <h2>Tobey Maguire</h2>
+      <p>Lorem ipsum dolor sit amet consectetur..</p>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="data10">
+      <div class="status10">
+        <img src="check-mark.svg" alt="check-mark">
+      </div>
+      <div class="time10">
+        00:23
+      </div>
+      <div class="count10">
+        1
+      </div>
+    </div>
+  </a>
+</li>
+<li>
+  <a href="#">
+    <div class="contact11">
+      <img class="photo11" src="https://i.pinimg.com/originals/87/24/66/872466b4f41b1fd08c689484207e71f7.jpg" alt="avatar">
+      <h2>Chris Avans</h2>
+      <p>Lorem ipsum dolor sit amet consectetur..</p>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="data11">
+      <div class="status11">
+        <img src="check-mark.svg" alt="check-mark">
+      </div>
+      <div class="time11">
+        01:02
+      </div>
+      <div class="count11">
+        3
+      </div>
+    </div>
+  </a>
+</li>
+<li>
+  <a href="#">
+    <div class="contact12">
+      <img class="photo12" src="https://ntvb.tmsimg.com/assets/assets/506866_v9_bd.jpg" alt="avatar">
+      <h2>Andrew Garfield</h2>
+      <p>Lorem ipsum dolor sit amet consectetur..</p>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="data12">
+      <div class="status12">
+        <img src="check-mark.svg" alt="check-mark">
+      </div>
+      <div class="time12">
+        01:20
+      </div>
+      <div class="count12">
+        1
+      </div>
+    </div>
+  </a>
+</li>
+<li>
+  <a href="#">
+    <div class="contact13">
+      <img class="photo13" src="https://de.web.img3.acsta.net/pictures/19/02/25/12/01/3535371.jpg" alt="avatar">
+      <h2>Jennifer Lopez</h2>
+      <p>Lorem ipsum dolor sit amet consectetur..</p>
+      <p>Lorem, ipsum dolor.</p>
+    </div>
+
+    <div class="data13">
+      <div class="status13">
+        <img src="check-mark.svg" alt="check-mark">
+      </div>
+      <div class="time13">
+        01:32
+      </div>
+      <div class="count13">
+        4
+      </div>
+    </div>
+  </a>
+</li>
+       </ul>
+
+
+       <div class="circle-effect">
+
+
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    
+    
+    </div>
+    
+
+           </section>
+
+       
+        <a href="#">
+
+ 
+
+      <div class="chat">
+          <img class="chat-img" src="chat.png"
+             alt="chat">
+
+             
+             <div class="count9">
+              50
+             </div>
+
+
+             <div class="call">
+              <img src="call.png" 
+              alt="call">
+             </div>
+
+             <div class="menu">
+              <img src="menu.png" alt="menu">
+             </div>
+
+             
+        <div class="togler">
+          <img src="chat2.png" 
+          alt="togler">
+
+        </div>
+      </div>
+
+    </a>
+    
+
+    </main>
+      </div>
+ 
+    </div>
+
+    
+</body>
+</html>
